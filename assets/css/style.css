@@ -1,10 +1,3 @@
-/**
-* Template Name: Personal - v2.1.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -139,6 +132,136 @@ h1, h2, h3, h4, h5, h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
+    /* Container */
+    .skills-container {
+      padding: 20px;
+      background: #f4f8fc;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    /* Title Section */
+    .skills-title h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #0b2338;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      position: relative;
+    }
+  
+    .skills-title h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #0084ff;
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  
+    /* Row and Columns */
+    .skills-row {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .skills-col {
+      width: 100%;
+      max-width: 800px;
+    }
+  
+    /* Section Styling */
+    .skills-section {
+      background: linear-gradient(145deg, #e6eef7, #ffffff);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+  
+    .skills-section:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+  
+    .skills-section.languages-section {
+      border-left: 4px solid #007bff;
+    }
+  
+    .skills-section.libraries-section {
+      border-left: 4px solid #28a745;
+    }
+  
+    .skills-section.frameworks-section {
+      border-left: 4px solid #ffc107;
+    }
+  
+    .skills-section.databases-section {
+      border-left: 4px solid #fd7e14;
+    }
+  
+    .skills-section.interests-section {
+      border-left: 4px solid #17a2b8;
+    }
+  
+    .skills-section.addons-section {
+      border-left: 4px solid #6f42c1;
+    }
+  
+    /* Heading */
+    .skills-heading {
+      color: #0b2338;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+  
+    /* Badges */
+    .skills-badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+  
+    .skill-badge {
+      background: linear-gradient(145deg, #12d640, #0f9c3f);
+      color: white;
+      border-radius: 25px;
+      padding: 8px 20px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+  
+    .skill-badge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+.education-image-wrapper-lg {
+  width: 100%;
+  height: 200px;
+  /* Increase the height for a larger image */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.education-image-wrapper-lg img {
+  width: auto;
+  height: 100%;
+  /* Ensure the image height fills the container */
+  object-fit: contain;
+  /* Maintain aspect ratio without cropping */
+}
+
 .nav-menu {
   margin-top: 35px;
 }
