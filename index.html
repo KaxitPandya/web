@@ -60,19 +60,29 @@
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.nav-menu a').forEach(link => {
       link.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent default anchor behavior
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+
+        // Check if the link is external (e.g., starts with "http" or opens in a new tab)
+        if (this.target === '_blank' || href.startsWith('http')) {
+          return; // Allow default behavior for external links
+        }
+
+        // Prevent default for internal links
+        event.preventDefault();
+
+        const target = document.querySelector(href);
         if (target) {
           const offset = -250; // Adjust this value for negative offset
           const targetPosition = target.offsetTop + offset;
           window.scrollTo({
             top: targetPosition > 0 ? targetPosition : 0, // Ensure it doesn't scroll above the document start
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
         }
       });
     });
   });
+
 
   </script>
 
@@ -100,8 +110,7 @@
           <!--          <li><a href="#projects"> <span>Projects</span></a></li>-->
           <li><a href="#portfolio"> <span>Projects</span></a></li>
           <li><a href="#skills"> <span>Skills</span></a></li>
-          <li><a href="https://drive.google.com/file/d/1SyAhBmLhtfb4G3ZYzAFoEmwsbMqao-xA/view?usp=sharing"
-              target="_blank"> <span>Resume</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1SyAhBmLhtfb4G3ZYzAFoEmwsbMqao-xA/view?usp=sharing" target="_blank" ><span>Resume</span></a></li>
           <!-- <li><a href="#links"> <span>Resume & Links</span></a></li> -->
           <li><a href="#contacts"> <span>Contact</span></a></li>
 
