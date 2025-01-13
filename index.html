@@ -12,7 +12,7 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-5BB8W2X');</script>
   <!-- End Google Tag Manager -->
-  <link rel="icon" type="image/png" href="/favicon.jpg" >
+  <link rel="icon" type="image/png" href="/favicon.jpg">
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -48,13 +48,32 @@
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>  
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-169007209-3');
+
+    // #new
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = -250; // Adjust this value for negative offset
+          const targetPosition = target.offsetTop + offset;
+          window.scrollTo({
+            top: targetPosition > 0 ? targetPosition : 0, // Ensure it doesn't scroll above the document start
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+
   </script>
 
 </head>
@@ -81,7 +100,8 @@
           <!--          <li><a href="#projects"> <span>Projects</span></a></li>-->
           <li><a href="#portfolio"> <span>Projects</span></a></li>
           <li><a href="#skills"> <span>Skills</span></a></li>
-          <li><a href="https://drive.google.com/file/d/1GQ2Y9yJDgcw5FZvtCyJstFVRdZ92D7jO/view?usp=sharing" target="_blank"> <span>Resume</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1SyAhBmLhtfb4G3ZYzAFoEmwsbMqao-xA/view?usp=sharing"
+              target="_blank"> <span>Resume</span></a></li>
           <!-- <li><a href="#links"> <span>Resume & Links</span></a></li> -->
           <li><a href="#contacts"> <span>Contact</span></a></li>
 
@@ -114,23 +134,35 @@
           <img src="assets/img/profile.jpg" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <p>I am a focused and enthusiastic computer engineering student with a keen interest in Web development and
-            artificial intelligence. Through my academic journey, I have delved deeply into these domains, gaining
-            comprehensive exposure to their underlying concepts and applying them vividly to various projects. It is
-            through this hands-on experience that my passion for Web development and AI blossomed. I am driven by a
-            desire to build and apply algorithms to solve real-world industry problems, and I am eager to continue
-            exploring and innovating in these exciting fields.
+          <p>Hello, I’m Kaxit Pandya, a passionate researcher, engineer, and problem solver with a strong focus on
+            Artificial Intelligence (AI) and Machine Learning (ML). I’m currently pursuing my Master in Computer
+            Engineering specializing in AI at the University of Waterloo, where I’m exploring Generative AI (GenAI) and
+            its integration into real-world applications
+            <br>
+            <br>
+            With experience as a Research Assistant at leading institutions like Indian Space Research Organisation
+            (ISRO), Indian Institute of Technology (IIT) Gandhinagar, National Chung Cheng University in Taiwan, and
+            University of Waterloo, I’ve tackled diverse challenges ranging from deep learning models for radar pulse
+            classification to federated learning for water quality prediction. Professionally, I’ve contributed as an
+            AI/ML Data Engineer at Genellipse Inc., I developed text extraction pipelines using Google Cloud Vision API,
+            applied BERT-based models for U.S. death certificates, and leveraged LLMs to deliver actionable insights.
+            <!-- <br> -->
+            <!-- <br> -->
+            <!-- I’m driven by my curiosity for innovative solutions, whether it’s leveraging Large Language Models (LLMs) to automate complex tasks or collaborating on impactful projects at organizations like WAT.AI. Outside my professional pursuits, I’m an active contributor to the tech community, having led initiatives as a Chairperson of GeeksForGeeks PDEU Chapter and
+          contributed to open-source platforms like Hacktoberfest. -->
+            <!-- <br> -->
+            <!-- Let’s connect and shape the future of AI together! -->
           </p>
           <div class="row">
             <div class="col-lg-6">
               <ul>
                 <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 23 March 2002</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +91 9998861602</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +1 365 998 6883</li>
               </ul>
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Ahmedabad, Gujarat</li>
+                <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Toronto, Canada</li>
                 <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> kaxitpandya@gmail.com</li>
               </ul>
             </div>
@@ -143,15 +175,15 @@
     <!-- ======= Interests ======= -->
     <div class="interests container">
 
-      <div class="section-title">
+      <div class="section-title" style="margin-top: -30px;">
         <h2>Interests</h2>
       </div>
 
       <div class="row">
-        <div class="col-lg-3 col-md-4">
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
-            <i class="ri-global-line" style="color: #ffbb2c;"></i>
-            <h3>Web Development</h3>
+            <i class="ri-code-s-slash-fill" style="color: #28a745;"></i>
+            <h3>Gen AI</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
@@ -169,21 +201,16 @@
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
             <i class="ri-code-s-slash-fill" style="color: #28a745;"></i>
-            <h3>Software Engineering</h3>
+            <h3>Data Engineer</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4">
+        <!-- <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-bar-chart-box-line" style="color: #f1081f;"></i>
             <h3>Visualization</h3>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #47aeff;"></i>
-            <h3>Algorithms</h3>
-          </div>
-        </div>
+        </div> -->
+
       </div>
 
     </div><!-- End Interests -->
@@ -192,27 +219,44 @@
 
 
   <!-- ======= Education Section ======= -->
-  <section id="education" class="services">
+  <section id="education" class="services" style="margin-top: 10px;">
     <div class="container">
       <div class="section-title">
         <h2>Education</h2>
       </div>
       <div class="row">
-        <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
-
-
-          <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"
-            style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-            <img src="assets/img/education/pdpu.png" class="img-fluid" alt="">
-            <!-- <h4 style="text-align:left;"><a href="https://www.asu.edu/" target="_blank" style="color:#12d640">Arizona State University</a><br> </h4> -->
-            <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>B.Tech in Computer Engineering</em></p>
-            <h5 style="text-align:left;padding: 0px 10px;">June 2020 - June 2024</h5>
-            <h6 style="text-align:left;color:#fff;padding: 0px 10px;font-style: normal;">CGPA: 9.62</h6>
-            <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Relevant Coursework</h6>
-            <ul style="text-align:left;color:#fff;">
+        <!-- Education 1 -->
+        <div class="col-md-6" data-aos="fade-up" style="padding-bottom: 20px;">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100" style="padding: 0; text-align: center;">
+            <div>
+              <img src="assets/img/education/waterloo.jpg" class="img-fluid" alt="">
+            </div>
+            <p style="text-align: left; color: #fff; padding: 5px 10px;"><em>Masters in Computer Engineering (AI
+                Specialization)</em></p>
+            <h5 style="text-align: left; padding: 0px 10px;">August 2024 - August 2025</h5>
+            <h6 style="text-align: left; color: #fff; padding: 0px 10px; font-style: normal;">CGPA: 8.6</h6>
+            <h6 style="text-align: left; color: #fff; padding: 0px 10px;">Relevant Coursework:</h6>
+            <ul style="text-align: left; color: #fff;">
+              <li>Generative AI</li>
+              <li>Large Language Models (LLMs)</li>
+              <li>Machine Learning</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Education 2 -->
+        <div class="col-md-6" data-aos="fade-up" style="padding-bottom: 20px;">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100" style="padding: 0; text-align: center;">
+            <div class="education-image-wrapper-lg">
+              <img src="assets/img/education/pdpu.png" class="img-fluid" alt="">
+            </div>
+            <p style="text-align: left; color: #fff; padding: 5px 10px;"><em>B.Tech in Computer Engineering</em></p>
+            <h5 style="text-align: left; padding: 0px 10px;">June 2020 - July 2024</h5>
+            <h6 style="text-align: left; color: #fff; padding: 0px 10px; font-style: normal;">CGPA: 9.62</h6>
+            <h6 style="text-align: left; color: #fff; padding: 0px 10px;">Relevant Coursework:</h6>
+            <ul style="text-align: left; color: #fff;">
               <li>Artificial Intelligence</li>
+              <li>Machine Learning</li>
               <li>Data Structures & Algorithms</li>
-              <li>Web Development</li>
             </ul>
           </div>
         </div>
@@ -220,31 +264,55 @@
     </div>
 
 
-    <div class="portfolio">
+    <div class="portfolio" style="margin-top: -50px;">
       <div class="container">
         <div class="section-title">
-          <h2>Online Certification</h2>
+          <h2>Research Experience</h2>
 
           <div class="col-lg-20 pt-4 pt-lg-0 content">
-            <p style="font-size: medium; margin:10px;font-style:normal">‐ ‘Data Analyst with Python’ from IIT Madras
-              through National Programme on Technology Enhanced Learning (NPTEL)</p>
-            <p style="font-size: medium; margin:10px;font-style:normal">‐ ‘Machine Learning Specialization’ from
-              DeepLearning.AI by Andrew Ng through Coursera</p>
-            <p style="font-size: medium; margin:10px;font-style:normal">‐ ‘Deep Learning Specialization’ from
-              DeepLearning.AI by Andrew Ng through Coursera</p>
-            <p style="font-size: medium; margin:10px;font-style:normal">‐ ‘The Web Developer Bootcamp 2023’ from Colt
-              Steele through Udemy</p>
-            <p style="font-size: medium; margin:10px;font-style:normal">‐ Certificate of ‘Smart India Hackathon’ from
-              PDEU</p>
-            <p style="font-size: medium; margin:10px;font-style:normal">‐ Certificate on completion of a course
-              ‘JsonPowerDB’ from Login2Xplore</p>
-
-
+            <p style="font-size: medium; font-weight: 500; margin:10px;font-style:normal">An Intelligent Fashion Object
+              Classification Using CNN <a
+                href="https://publications.eai.eu/index.php/inis/article/view/4315" >(<span style="text-decoration: underline;">Published</span>)</a></p>
+            <p style="font-size: medium; font-weight: 500; margin:10px;font-style:normal">Federated Ensemble based Water
+              Quality Classification on Drone Images <a
+                href="https://drive.google.com/file/d/1Z3o3qK-LkYDUt5wSEJC4lpdgGS39KNMg/view">(<span style="text-decoration: underline;">Submitted</span>)</a></p>
+            <p style="font-size: medium; font-weight: 500; margin:10px;font-style:normal">Water Quality Prediction using
+              Machine Learning <a
+                href="https://drive.google.com/file/d/1XGgBj9hEnRcOFHOgGxkqA6pV_uKN46QX/view">(<span style="text-decoration: underline;">Submitted</span>)</a></p>
+            <p style="font-size: medium; font-weight: 500; margin:10px;font-style:normal">Advancement in phishing
+              attacks and Machine learning approaches <a
+                href="https://drive.google.com/file/d/1iSWPHYQW2JDehlRQLDzhOsqtwrYnIy2Z/view">(<span style="text-decoration: underline;">Submitted</span>)</a></p>
           </div>
+        </div>
+      </div>
 
 
-          <!-- Image  -->
-          <!-- <div class="row portfolio-container" style="position: relative; height: 437.75px;">
+      <div class="portfolio" style="margin-top: -40px;">
+        <div class="container">
+          <div class="section-title">
+            <h2>Online Certification</h2>
+
+            <div class="col-lg-20 pt-4 pt-lg-0 content">
+              <p style="font-size: medium; font-weight: 500; margin:10px;font-style:normal">‐ ‘Machine Learning
+                Specialization’, ‘Deep Learning Specialization’, ‘GenAI with LLMs’ from DeepLearning.AI by Andrew Ng
+                through Coursera</p>
+              <p style="font-size: medium; font-weight: 500; margin:10px;font-style:normal">‐ ‘LangChain Mastery’
+                and
+                ‘OpenAI Python API Bootcamp’ through Udemy</p>
+              <p style="font-size: medium; font-weight: 500; margin:10px;font-style:normal">‐ ‘Data Analyst with
+                Python’
+                from IIT Madras through National Programme on Technology Enhanced Learning (NPTEL)</p>
+              <p style="font-size: medium; font-weight: 500; margin:10px;font-style:normal">‐ ‘The Web Developer
+                Bootcamp
+                2023’ from Colt Steele through Udemy</p>
+              <p style="font-size: medium; font-weight: 500; margin:10px;font-style:normal">‐ ‘Smart India
+                Hackathon’</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image  -->
+        <!-- <div class="row portfolio-container" style="position: relative; height: 437.75px;">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
             <div class="portfolio-wrap">
@@ -329,8 +397,8 @@
           </div>
 
         </div> -->
-        </div>
       </div>
+    </div>
 
   </section>
   <!-- End Education Section -->
@@ -339,72 +407,205 @@
 
   <!-- Start Experience Section -->
 
-  <section id="experience" class="services">
+  <section id="experience" class="services" style="margin-top: 10px;">
     <div class="container">
       <div class="section-title">
         <h2>Experience</h2>
       </div>
       <div class="row">
+
         <div class="col-lg-12" data-aos="fade-up">
+          <a href="https://genellipse.com/">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4 style="text-align:left; color:#12d640;">
+                Genellipse Inc.
+              </h4>
+              <p style="text-align:left; color:#fff; font-weight: 600; font-size: large;"><em>AI/ML Data Engineer</em>
+              </p>
+              <h5 style="text-align:right;color:#fff; font-size: medium; margin-top: -20px;">October 2024 - December
+                2024</h5>
+              <ul style="text-align:left;color:#fff;">
+                <li>Built a text extraction pipeline for processing diverse document formats (PDF, Word, Excel),
+                  leveraging Google Cloud Vision API to extract data from U.S. death certificates with high accuracy
+                </li>
+                <li>Utilized BERT-based AI models to map key-value pairs from U.S. death certificate fields accurately
+                  and implemented large language models (LLMs) to interpret extracted information, delivering actionable
+                  insights for enhanced client reporting and decision-making</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-lg-12" data-aos="fade-up">
+          <a href="https://uwaterloo.ca/public-health-sciences/profiles/david-hammond">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4 style="text-align:left; color:#12d640;">
+                Dr. David Hammond, University of Waterloo
+              </h4>
+              <p style="text-align:left; color:#fff; font-weight: 600; font-size: large;"><em>Research Assistantships
+                  (RA)</em></p>
+              <h5 style="text-align:right;color:#fff; font-size: medium; margin-top: -20px;">September 2024</h5>
+              <ul style="text-align:left;color:#fff;">
+                <li>Implemented an automated web scraping system using Selenium to extract detailed information on
+                  grocery
+                  items from
+                  Walmart, Sobeys, and Target websites, with integrated data export to Excel sheets for efficient
+                  analysis
+                </li>
+                <li>Leveraged an image download module to systematically retrieve product images from scraped websites
+                  and
+                  utilized advanced
+                  OCR (Optical Character Recognition) techniques to extract textual information from these downloaded
+                  product images</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-12" data-aos="fade-up">
+          <a href="https://iitgn.ac.in/">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4 style="text-align:left; color:#12d640;">
+                Indian Institute of Technology (IIT) – Gandhinagar
+              </h4>
+              <p style="text-align:left; color:#fff; font-weight: 600; font-size: large;"><em>Research Intern</em></p>
+              <h5 style="text-align:right;color:#fff; font-size: medium; margin-top: -20px;">June 2024 - August 2024
+              </h5>
+              <ul style="text-align:left;color:#fff;">
+                <li>Designed a Deep Learning model using Generative Adversarial Networks (GANs) to perform inverse
+                  design
+                  of 2D
+                  heterostructure materials, enabling efficient exploration of material properties
+                </li>
+                <li>Conducted post-processing of atomistic simulation data using Python to extract and visualize
+                  material
+                  properties</li>
+                <li>Converted QuantumATK software functionalities into Python scripts to automate the creation of
+                  various
+                  heterostructure
+                  configurations</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-12" data-aos="fade-up" onclick="window.location='https://www.ccu.edu.tw/';"
+          style="cursor: pointer;">
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a href="https://www.ccu.edu.tw/" style="color:#12d640">TEEP@ASIA PLUS PROGRAM
-                at Natonal Chung Cheng University, Taiwan</a><br> </h4>
-            <h5 style="text-align:left;">January 2024 - May 2024</h5>
-            <p style="text-align:left;color:#fff"><em>Research Intern </em></p>
-            <ul style="text-align:left;">
-              <li>Supported by Ministry of Education, Taiwan</li>
-              <li>Implemening Multimodal Federated Learning for predicing Water Quality Parameters
+            <h4 style="text-align:left; color:#12d640;">
+              TEEP@ASIA PLUS PROGRAM at National Chung Cheng University, Taiwan
+            </h4>
+            <p style="text-align:left; color:#fff; font-weight: 600; font-size: large;">
+              <em>Research Intern</em>
+            </p>
+            <h5 style="text-align:right; color:#fff; font-size: medium; margin-top: -20px;">
+              January 2024 - May 2024
+            </h5>
+            <ul style="text-align:left; color:#fff;">
+              <li>
+                Implemented Federated Learning (FL) model to predict water quality parameters using drone-captured
+                images,
+                ensuring privacy across geographically distributed datasets, and authored a
+                <a href="https://drive.google.com/file/d/1Z3o3qK-LkYDUt5wSEJC4lpdgGS39KNMg/view"
+                  style="color:#12d640; text-decoration:underline;" onclick="event.stopPropagation();">
+                  Research Paper
+                </a>
+                detailing the methodologies and results.
               </li>
-              <li>This Innovative approach incorporates Drone Images, Federated Learning, and Trustworthy AI</li>
-            </ul>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a href="https://www.sac.gov.in/Vyom/" style="color:#12d640">Space Application
-                Center, Indian Space Research Organisation (ISRO)</a><br> </h4>
-            <h5 style="text-align:left;">May 2023 - July 2023</h5>
-            <p style="text-align:left;color:#fff"><em>Research Intern</em></p>
-            <ul style="text-align:left;">
-              <li>Working for the betterment of radar systems using several Deep Neural Networks</li>
-              <li>Dealing with the noisy data directly taken from the ISRO’s Satellite</li>
-              <li>Achieved an Accuracy of 94% on the Real‐Time Data</li>
-            </ul>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a
-                href="https://www.linkedin.com/company/humanansys-technlogies-private-limited/about/"
-                style="color:#12d640">HumanAnsys</a><br> </h4>
-            <h5 style="text-align:left;">Jan 2023 - March 2023</h5>
-            <p style="text-align:left;color:#fff"><em>Software Developer Intern</em></p>
-            <ul style="text-align:left;">
-              <li>Using AWS services to deploy a video calling website</li>
-              <li>Gained expertise of AWS cloud services</li>
-            </ul>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a href="https://www.linkedin.com/company/hybrid-utopia/?originalSubdomain=in"
-                target="_blank" style="color:#12d640">Hybrid Utopia</a><br> </h4>
-            <h5 style="text-align:left;">June 2022 - Dec 2022</h5>
-            <p style="text-align:left;color:#fff"><em>Web Developer Intern</em></p>
-            <ul style="text-align:left;">
-              <li>Create websites from scratch using several modern‐day frameworks like Tailwind CSS</li>
-              <li>Mastered the use of Node, MongoDB and Express</li>
-              <li>Making the site Dynamic and responsive</li>
+              <li>
+                Executed robust aggregation strategies such as FedAvg, FedAvgM, FedMedian, and FedProx using the Flower
+                Framework,
+                while mastering key Federated Learning (FL) concepts, including handling non-IID data distributions and
+                managing
+                system
+                heterogeneity.
+              </li>
+              <li>
+                Applied Explainable AI (XAI) techniques, such as SHAP, to interpret predictions, highlighting parameter
+                significance
+                and enhancing transparency and trust.
+              </li>
             </ul>
           </div>
         </div>
+
+        <div class="col-lg-12" data-aos="fade-up">
+          <a href="https://www.sac.gov.in/Vyom/">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4 style="text-align:left; color:#12d640;">
+                Space Application Center, Indian Space Research Organisation (ISRO)
+              </h4>
+              <p style="text-align:left; color:#fff; font-weight: 600; font-size: large;"><em>Research Intern</em></p>
+              <h5 style="text-align:right;color:#fff; font-size: medium; margin-top: -20px;">May 2023 - July 2023
+              </h5>
+              <ul style="text-align:left;color:#fff;">
+                <li>Developed Deep Neural Networks for predicting classification of Pulse Radar Interval Modulation
+                </li>
+                <li>Processed and handled noisy, raw radar pulse data directly from ISRO’s satellites</li>
+                <li>Achieved 94% classification accuracy in identifying complex radar Pulse Repetition Intervals (PRI)
+                  patterns, including
+                  staggered, jittered, dwell and switch, sliding, linear, and sinusoidal</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-lg-12" data-aos="fade-up">
+          <a href="https://www.linkedin.com/company/humanansys-technlogies-private-limited/about/">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4 style="text-align:left; color:#12d640;">
+                HumanAnsys
+              </h4>
+              <p style="text-align:left; color:#fff; font-weight: 600; font-size: large;"><em>Software Developer
+                  Intern</em></p>
+              <h5 style="text-align:right;color:#fff; font-size: medium; margin-top: -20px;">Jan 2023 - March 2023
+              </h5>
+              <ul style="text-align:left;color:#fff;">
+                <li>Understanding Cloud systems, architecture, and AWS services
+                </li>
+                <li>Using AWS services (EC2, S3 bucket, Lambda Functions) to deploy a video calling website</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-12" data-aos="fade-up">
+          <a href="https://www.linkedin.com/company/hybrid-utopia/?originalSubdomain=in">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4 style="text-align:left; color:#12d640;">
+                Hybrid Utopia
+              </h4>
+              <p style="text-align:left; color:#fff; font-weight: 600; font-size: large;"><em>Web Developer Intern</em>
+              </p>
+              <h5 style="text-align:right;color:#fff; font-size: medium; margin-top: -20px;">June 2022 - Dec 2022
+              </h5>
+              <ul style="text-align:left;color:#fff;">
+                <li>Create websites from scratch using several modern-day frameworks like node, express
+                </li>Performing Create, Read, Update, Delete (CRUD) operations using MongoDB</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+
       </div>
+
+    </div>
+    </div>
     </div>
 
 
     <!-- Extra Activities -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="section-title">
         <h2>Extra-Curricular Activities</h2>
       </div>
       <div class="row">
         <div class="col-lg-12" data-aos="fade-up">
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a style="color:#12d640">SnT ‐ Science & Technical Club of PDEU | Gandhinagar, Gujarat</a><br> </h4>
+            <h4 style="text-align:left;"><a style="color:#12d640">SnT ‐ Science & Technical Club of PDEU | Gandhinagar,
+                Gujarat</a><br> </h4>
             <h5 style="text-align:left;">June’22 – July’23</h5>
             <p style="text-align:left;color:#fff"><em>Web Development Head</em></p>
             <ul style="text-align:left;">
@@ -422,8 +623,8 @@
             </ul>
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a
-                style="color:#12d640">GeeksForGeeks ‐ GeeksForGeeks Student Chapter of PDEU | Gandhinagar, Gujarat</a><br> </h4>
+            <h4 style="text-align:left;"><a style="color:#12d640">GeeksForGeeks ‐ GeeksForGeeks Student Chapter of PDEU
+                | Gandhinagar, Gujarat</a><br> </h4>
             <h5 style="text-align:left;">June’22 – July’23</h5>
             <p style="text-align:left;color:#fff"><em>Chairperson</em></p>
             <ul style="text-align:left;">
@@ -436,13 +637,14 @@
             <h5 style="text-align:left;">August’22</h5>
             <p style="text-align:left;color:#fff"><em>AWS DeepRacer Contributor</em></p>
             <ul style="text-align:left;">
-              <li>Participated in AWS Deepracer Student league and came in the top 10% of racers out of 4000 students.</li>
+              <li>Participated in AWS Deepracer Student league and came in the top 10% of racers out of 4000 students.
+              </li>
               <li>Made a Reward function for training DeepRacer Car on Reinforcement Learning Model using AWS</li>
             </ul>
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a
-                style="color:#12d640">Civiqneeti – Law and Administration Club of PDEU | Gandhinagar, Gujarat</a><br> </h4>
+            <h4 style="text-align:left;"><a style="color:#12d640">Civiqneeti – Law and Administration Club of PDEU |
+                Gandhinagar, Gujarat</a><br> </h4>
             <h5 style="text-align:left;">June’22 – July’23</h5>
             <p style="text-align:left;color:#fff"><em>Web Development Head</em></p>
             <ul style="text-align:left;">
@@ -451,15 +653,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
 
   <!-- End Experience Section -->
 
 
-
   <!-- Start Project Section -->
-  <section id="portfolio" class="portfolio">
+  <section id="portfolio" class="portfolio" style="margin-top: 10px;">
     <div class="container">
 
       <div class="section-title">
@@ -478,123 +679,112 @@
 
       <div class="row portfolio-container">
 
-        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-6 col-md-6 portfolio-item filter-app"><a href="https://instagram-caption-generator-smudvyyr8eprlaxctt6ulg.streamlit.app/">
           <center>
-            <h4>Water Quality Index Prediction</h4>
+            <h4>AI-Powered Instagram Caption Generator</h4>
           </center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/twitteranalysis.jpg" class="img-fluid" alt="">
+            <img src="assets/img/project/AIInstagram.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <p>Using Machine Learning and Deep Learning, predicts the quality of the water</p>
+              <p>Developed using LangChain and Google’s PaLM API to create contextually relevant captions from user inputs.</p>
             </div>
-          </div>
+          </div></a>
         </div>
-
-        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
+        
+        <div class="col-lg-6 col-md-6 portfolio-item filter-app"><a href="https://q-adocuments.streamlit.app/">
           <center>
-            <h4>Mood Based Song Recommendation
-              System</h4>
+            <h4>Q&A Application on Private Documents</h4>
           </center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/gan.jpg" class="img-fluid" alt="">
+            <img src="assets/img/project/qanda.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <p>Suggest songs to user according to their current mood</p>
+              <p>Designed a Retrieval-Augmented Generation system for querying custom PDF and document formats.</p>
             </div>
-          </div>
+          </div></a>
         </div>
-
-        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
+        
+        <div class="col-lg-6 col-md-6 portfolio-item filter-app"><a href="https://customchatgpt1.streamlit.app/">
+          <center>
+            <h4>Custom ChatGPT</h4>
+          </center>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/image_fx_ (1).jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <p>Built a custom conversational app with LangChain and Streamlit, replicating a ChatGPT-like user experience.</p>
+            </div>
+          </div></a>
+        </div>
+        
+        <div class="col-lg-6 col-md-6 portfolio-item filter-app"><a href="https://colab.research.google.com/drive/1b7_XIOTeE0nKHmZUySUozC5QYgaUIVfg#scrollTo=62c5f5d1=">
+          <center>
+            <h4>Summarizing Large Documents</h4>
+          </center>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/image_fx_ (2).jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <p>Implemented summarization techniques with LangChain and OpenAI models to process and summarize large documents.
+              </p>
+            </div>
+          </div></a>
+        </div>
+        
+        <div class="col-lg-6 col-md-6 portfolio-item filter-app"><a href="">
           <center>
             <h4>DeepFake Audio Detection System</h4>
           </center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/iras.jpeg" class="img-fluid" alt="">
+            <img src="assets/img/project/image_fx_ (3).jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <p>Detects whether the audio is original or generated by AI</p>
+              <p>Preprocessed audio data with Librosa and classified audio as either Deepfake or human-generated using
+                pre-trained models.</p>
             </div>
-          </div>
+          </div></a>
         </div>
-
-        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
+        
+        <div class="col-lg-6 col-md-6 portfolio-item filter-app"><a href="https://github.com/KaxitPandya/Data-Minining-Project-2022">
           <center>
-            <h4>Management System</h4>
+            <h4>Water Quality Index Prediction</h4>
           </center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/ml.jpg" class="img-fluid" alt="">
+            <img src="assets/img/project/image_fx_ (4).jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <p>Developed an Inventory Management System with CRUD operations</p>
+              <p>Developed and deployed predictive models using various machine learning algorithms for water quality
+                prediction.</p>
             </div>
-          </div>
+          </div></a>
         </div>
-
-        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
+        
+        <div class="col-lg-6 col-md-6 portfolio-item filter-app"><a href="https://github.com/KaxitPandya/ManagementSystem/tree/master">
+          <center>
+            <h4>Inventory Management System</h4>
+          </center>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/image_fx_ (5).jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <p>Built a CRUD-based Inventory Management System using Node, Express, MongoDB, and Tailwind CSS.</p>
+            </div>
+          </div></a>
+        </div>
+        
+        <div class="col-lg-6 col-md-6 portfolio-item filter-app"><a href="https://github.com/KaxitPandya/Chrome-Extension">
           <center>
             <h4>Chrome Extension for Tracking Links</h4>
           </center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/blog.jpg" class="img-fluid" alt="">
+            <img src="assets/img/project/image_fx_ (6).jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <p>Developed an extension that saves current tabs links and other notes which can be
-                typed into it</p>
+              <p>Developed a Chrome extension that saves current tab URLs and user notes for easy access and management.</p>
             </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-          <center>
-            <h4>Snake Game</h4>
-          </center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/recommender.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <p>Created the retro Snake Game</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-          <center>
-            <h4>Operating Systems Algorithms
-              Website</h4>
-          </center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/resume.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <p>To visually demonstrate and simulate OS Algorithms</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-          <center>
-            <h4>PDEU Techfest’22 Website</h4>
-          </center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/musicplayer.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <p>Website gives information of universities main technical fest and it’s events</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-          <center>
-            <h4>Flipkart Clone</h4>
-          </center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/vdg.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <p>Created Flipkart Clone</p>
-            </div>
-          </div>
+          </div></a>
         </div>
 
 
-        
 
-  
 
-        
+
+
+
+
 
 
 
@@ -623,56 +813,239 @@
 
   <!-- Start Skills Section -->
 
-  <section id="skills" class="services">
+  <section id="skills" class="services" style="margin-top: 10px;">
     <div class="container">
       <div class="section-title">
         <h2>Skills</h2>
       </div>
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
-            <h4 style="text-align:left;color:#09203a">Languages</h4>
-            <p style="text-align:left;">
-              <img src="assets/img/skills/download (24).jpg" alt="vectorlogo.zone" height="60" width="100">
-              <img src="assets/img/skills/download (25).jpg" alt="vectorlogo.zone" height="70" width="110">
-              <img src="assets/img/skills/download.jpg" alt="vectorlogo.zone" height="70" width="150">
-              <img src="assets/img/skills/images (1).jpg" alt="vectorlogo.zone" height="60" width="100">
-              <img src="assets/img/skills/download (1).jpg" alt="vectorlogo.zone" height="60" width="100">
-              <img src="assets/img/skills/download (2).jpg" alt="upload.wikimedia.org" height="60" width="70">
-          </p>
-      </div>
-      <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">Frameworks</h4>
-          <p style="text-align:left;">
-              <img src="assets/img/skills/download (3).jpg" alt="vectorlogo.zone" height="60" width="130">
-              <img src="assets/img/skills/download (3).jpg" alt="vectorlogo.zone" height="60" width="130">
-              <img src="assets/img/skills/download (4).jpg" alt="vectorlogo.zone" height="80" width="130">
-              <img src="assets/img/skills/download (26).jpg" alt="vectorlogo.zone" height="30" width="100">
-              <!-- <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="vectorlogo.zone"> -->
-              <img src="assets/img/skills/download (9).jpg" alt="vectorlogo.zone" height="40" width="130">
-              <img src="assets/img/skills/download (27).jpg" alt="vectorlogo.zone" height="60" width="130">
-          </p>
-      </div>
-      <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">Databases</h4>
-          <p style="text-align:left;">
-              <img src="assets/img/skills/download (29).jpg" alt="vectorlogo.zone" height="80" width="130">
-              <img src="assets/img/skills/download (23).jpg" alt="vectorlogo.zone" height="50" width="150">
-          </p>
-      </div>
-      <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">Tools</h4>
-          <p style="text-align:left;">
-              <img style="margin: 6px;" src="assets/img/skills/download (5).jpg" alt="vectorlogo.zone" height="60" width="130">
-              <img style="margin: 6px;" src="assets/img/skills/download (6).jpg" alt="vectorlogo.zone" height="60" width="130">
-              <img style="margin: 12px;" src="assets/img/skills/download (7).jpg" alt="vectorlogo.zone" height="60" width="130">
-              <img style="margin: 12px;" src="assets/img/skills/download (30).jpg" alt="vectorlogo.zone" height="60" width="130">
-              <img style="margin: 12px;" src="assets/img/skills/download (8).jpg" alt="vectorlogo.zone" height="50" width="80">
-          </p>
+      <div class="skills-row">
+        <div class="skills-col">
+
+          <!-- Languages Section -->
+          <div class="skills-section languages-section" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="skills-heading">Languages</h4>
+            <div class="skills-badges">
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">C</span>
+              <span class="skill-badge">C++</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">SQL</span>
+            </div>
           </div>
+
+          <!-- Libraries Section -->
+          <div class="skills-section libraries-section" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="skills-heading">Libraries</h4>
+            <div class="skills-badges">
+              <span class="skill-badge">NumPy</span>
+              <span class="skill-badge">Pandas</span>
+              <span class="skill-badge">Matplotlib</span>
+              <span class="skill-badge">TensorFlow</span>
+              <span class="skill-badge">LangChain</span>
+              <span class="skill-badge">AWS SageMaker</span>
+              <span class="skill-badge">Selenium</span>
+            </div>
+          </div>
+
+          <!-- Framework Section -->
+          <div class="skills-section frameworks-section" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="skills-heading">Framework</h4>
+            <div class="skills-badges">
+              <span class="skill-badge">Tailwind CSS</span>
+              <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">Express</span>
+            </div>
+          </div>
+
+          <!-- Database Section -->
+          <div class="skills-section databases-section" data-aos="fade-up" data-aos-delay="400">
+            <h4 class="skills-heading">Database</h4>
+            <div class="skills-badges">
+              <span class="skill-badge">MongoDB</span>
+              <span class="skill-badge">MySQL</span>
+            </div>
+          </div>
+
+          <!-- Area of Interest Section
+          <div class="skills-section interests-section" data-aos="fade-up" data-aos-delay="500">
+            <h4 class="skills-heading">Area of Interest</h4>
+            <div class="skills-badges">
+              <span class="skill-badge">Artificial Intelligence (AI)</span>
+              <span class="skill-badge">Machine Learning (ML)</span>
+              <span class="skill-badge">Generative AI (GenAI)</span>
+            </div>
+          </div> -->
+
+          <!-- Add-on Skills Section -->
+          <div class="skills-section addons-section" data-aos="fade-up" data-aos-delay="600">
+            <h4 class="skills-heading">Add-on Skills</h4>
+            <div class="skills-badges">
+              <span class="skill-badge">Tableau</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
+
+
+
+    </div>
+
+
+
+    <!-- <div class="col-lg-12" data-aos="fade-up">
+      <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
+        <h4 style="text-align:left;color:#09203a">Languages</h4>
+        <p style="text-align:left;">
+          <img src="assets/img/skills/download (24).jpg" alt="vectorlogo.zone" height="60" width="100">
+          <img src="assets/img/skills/download (25).jpg" alt="vectorlogo.zone" height="70" width="110">
+          <img src="assets/img/skills/download.jpg" alt="vectorlogo.zone" height="70" width="150">
+          <img src="assets/img/skills/images (1).jpg" alt="vectorlogo.zone" height="60" width="100">
+          <img src="assets/img/skills/download (1).jpg" alt="vectorlogo.zone" height="60" width="100">
+          <img src="assets/img/skills/download (2).jpg" alt="upload.wikimedia.org" height="60" width="70">
+        </p>
+      </div>
+      <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
+        <h4 style="text-align:left;color:#09203a">Frameworks</h4>
+        <p style="text-align:left;">
+          <img src="assets/img/skills/download (3).jpg" alt="vectorlogo.zone" height="60" width="130">
+          <img src="assets/img/skills/download (3).jpg" alt="vectorlogo.zone" height="60" width="130">
+          <img src="assets/img/skills/download (4).jpg" alt="vectorlogo.zone" height="80" width="130">
+          <img src="assets/img/skills/download (26).jpg" alt="vectorlogo.zone" height="30" width="100">
+           <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="vectorlogo.zone"> 
+          <img src="assets/img/skills/download (9).jpg" alt="vectorlogo.zone" height="40" width="130">
+          <img src="assets/img/skills/download (27).jpg" alt="vectorlogo.zone" height="60" width="130">
+        </p>
+      </div>
+      <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
+        <h4 style="text-align:left;color:#09203a">Databases</h4>
+        <p style="text-align:left;">
+          <img src="assets/img/skills/download (29).jpg" alt="vectorlogo.zone" height="80" width="130">
+          <img src="assets/img/skills/download (23).jpg" alt="vectorlogo.zone" height="50" width="150">
+        </p>
+      </div>
+      <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
+        <h4 style="text-align:left;color:#09203a">Tools</h4>
+        <p style="text-align:left;">
+          <img style="margin: 6px;" src="assets/img/skills/download (5).jpg" alt="vectorlogo.zone" height="60"
+            width="130">
+          <img style="margin: 6px;" src="assets/img/skills/download (6).jpg" alt="vectorlogo.zone" height="60"
+            width="130">
+          <img style="margin: 12px;" src="assets/img/skills/download (7).jpg" alt="vectorlogo.zone" height="60"
+            width="130">
+          <img style="margin: 12px;" src="assets/img/skills/download (30).jpg" alt="vectorlogo.zone" height="60"
+            width="130">
+          <img style="margin: 12px;" src="assets/img/skills/download (8).jpg" alt="vectorlogo.zone" height="50"
+            width="80">
+        </p>
+      </div>
+    </div> 
+    </div> 
+    </div>  -->
+
+    <div class="container">
+      <div class="section-title">
+        <h2>Extra-Curricular Activities</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up">
+          <a href="https://uwaterloo.ca/graduate-studies-endowment-fund/">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4 style="text-align:left; color:#12d640;">
+                Engineering Representative | Graduate Student Endowment Fund (GSEF) | University of Waterloo
+              </h4>
+              <p style="text-align:right; color:#fff; font-weight: 500; font-size: large; margin-top: -35px;"><em>Sep’24 – Sep’25</em></p>
+              <ul style="text-align:left;color:#fff; margin-top: 20px;">
+                <li>Reviewing and evaluating funding applications, ensuring strategic allocation of university resources across
+                  diverse academic disciplines to graduate student projects and initiatives</li>
+                <li>Providing strategic input on funding decisions to enhance the academic and professional development of
+                  graduate students</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-lg-12" data-aos="fade-up">
+          <a href="https://watai.ca/">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="200">
+              <h4 style="text-align:left; color:#12d640;">
+                Technical Project Manager | Waterloo AI Institute (WAT.AI) | University of Waterloo
+              </h4>
+              <p style="text-align:right; color:#fff; font-weight: 500; font-size: large; margin-top: -10px;"><em>Sep’24 – Sep’25</em></p>
+              <ul style="text-align:left;color:#fff; margin-top: 10px;">
+                <li>Building deployable AI models on onboard satellites, focusing on the semantic segmentation of methane plumes
+                  using hyperspectral ML models</li>
+                <li>Leading AI research projects, managing teams, ensuring timely completion and quality deliverables in
+                  collaboration with industry partners</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-lg-12" data-aos="fade-up">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="300" onclick="window.location='https://github.com/BhavyaJain711/TessaractWebsite/tree/master'">
+              <h4 style="text-align:left; color:#12d640;">
+                Web Development Head | SnT - Science & Technical Club of PDEU | Gandhinagar, Gujarat
+              </h4>
+              <p style="text-align:right; color:#fff; font-weight: 500; font-size: large; margin-top: -35px;"><em>June’22 – July’23</em></p>
+              <ul style="text-align:left;color:#fff; margin-top: 20px;">
+                <li style="color:#fff;">Created a Website for the university flagship event named Tesseract (<a href="https://github.com/BhavyaJain711/TessaractWebsite/tree/master" style="text-decoration: underline;">GitHub</a>)</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-lg-12" data-aos="fade-up">
+          <a href="https://drive.google.com/file/d/1WOcjexlorqnLZqqnmbQrOJ2TU_TLVb9d/view">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="400">
+              <h4 style="text-align:left; color:#12d640;">
+                Chairperson | GeeksForGeeks - GeeksForGeeks Student Chapter of PDEU | Gandhinagar, Gujarat
+              </h4>
+              <p style="text-align:right; color:#fff; font-weight: 500; font-size: large; margin-top: -30px;"><em>June’22 – July’23</em></p>
+              <ul style="text-align:left;color:#fff; margin-top: 20px;">
+                <li>Management of Events and Workshop at regular intervals</li>
+                <li>Leading a team of 50 members and Developing Coding Culture at our University</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-lg-12" data-aos="fade-up">
+          <!-- <a href="#"> -->
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="500">
+              <h4 style="text-align:left; color:#12d640;">
+                Open Source Contributor | Hacktoberfest 2022
+              </h4>
+              <p style="text-align:right; color:#fff; font-weight: 500; font-size: large; margin-top: -10px;"><em>October‘22</em></p>
+              <ul style="text-align:left;color:#fff; margin-top: 20px;">
+                <li>Made more than 6 contributions to open source via GitHub using HTML, CSS, JavaScript, Tailwind CSS, Node.js,
+                  MongoDB</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-lg-12" data-aos="fade-up">
+          <!-- <a href="#"> -->
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="600">
+              <h4 style="text-align:left; color:#12d640;">
+                AWS DeepRacer Contributor | Amazon Web Service DeepRacer
+              </h4>
+              <p style="text-align:right; color:#fff; font-weight: 500; font-size: large; margin-top: -45px;"><em>August‘22</em></p>
+              <ul style="text-align:left;color:#fff; margin-top: 20px;">
+                <li>Participated in AWS Deepracer Student league and came in the top 10% of racers out of 4000 students</li>
+                <li>Made a Reward function for training DeepRacer Car on Reinforcement Learning Model using AWS</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- End Skills Section -->
@@ -681,33 +1054,33 @@
 
 
   <!-- Start Links section -->
-  <section id="links" class="services">
+  <!-- <section id="links" class="services">
     <div class="container">
       <div class="section-title">
         <h2>Resume & Links</h2>
       </div>
       <div class="row">
         <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://drive.google.com/file/d/1JKMsxtVHPBUrXIlGWIxjIAsDAsXN9CnZ/view?usp=sharing" target="_blank">
+          <a href="https://drive.google.com/file/d/1SyAhBmLhtfb4G3ZYzAFoEmwsbMqao-xA/view?usp=sharing" target="_blank">
             <div class="icon"><i class="icofont-page"></i></div>
           </a>
-          <h4 class="title"><a href="https://drive.google.com/file/d/1JKMsxtVHPBUrXIlGWIxjIAsDAsXN9CnZ/view?usp=sharing"
+          <h4 class="title"><a href="https://drive.google.com/file/d/1SyAhBmLhtfb4G3ZYzAFoEmwsbMqao-xA/view?usp=sharing"
               target="_blank">Resume</a></h4>
           <p class="description" style="color:#fff;">The link contains downloadable resume</p>
-        </div>
-        <!-- <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+        </div> -->
+  <!-- <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
           <a href="https://techingenious.herokuapp.com/" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
           <h4 class="title"><a href="https://techingenious.herokuapp.com/" target="_blank">Blog</a></h4>
           <p class="description" style="color:#fff;">Blog containing articles on AI, coding, development</p>
         </div> -->
-      </div>
+  <!-- </div>
     </div>
-  </section> <!--End Links Section -->
+  </section> End Links Section -->
 
 
   <!-- Start Contact Section -->
 
-  <section id="contacts" class="contact">
+  <section id="contacts" class="contact" style="margin-top: 10px;">
     <div class="container">
 
       <div class="section-title">
@@ -720,9 +1093,7 @@
           <div class="info-box">
             <i class="bx bx-map"></i>
             <h3>My Address</h3>
-            <p>26, Pushpavilla Bunglows,</p>
-            <p>Near Smruti Mandir, Ghodasar</p>
-            <p>Ahmedabad, 382443</p>
+            <p>Toronto, Ontario, Canada</p>
           </div>
         </div>
 
@@ -745,14 +1116,13 @@
             <i class="bx bx-envelope"></i>
             <h3>Email</h3>
             <p>kaxitpandya@gmail.com</p>
-            <p>kaxit.pce20@sot.pdpu.ac.in</p>
           </div>
         </div>
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-phone-call"></i>
             <h3>Contact</h3>
-            <p>+91 9998861602</p>
+            <p>+1 365 998 6883</p>
           </div>
         </div>
       </div>
@@ -769,21 +1139,21 @@
   <script type="text/javascript">
     // Initialize Typed.js
     var typed = new Typed('.typing', {
-      strings: ["AI Enthusiast", "Coder", "Developer"],
+      strings: ["GenAI Developer", "ML Enthusiast", "Data Engineer"],
       loop: true,
-      typeSpeed: 65,
-      backSpeed: 65
+      typeSpeed: 99,
+      backSpeed: 99
     });
 
 
-  // <script type="text/javascript">
-  //   var typed = new Typed('.typing', {
-  //     strings: ["AI Enthusiast", "Coder", "Developer"],
-  //     loop: true,
-  //     typeSpeed: 65,
-  //     backSpeed: 65
-  //   });
-  // </script>
+    // <script type="text/javascript">
+    //   var typed = new Typed('.typing', {
+    //     strings: ["AI Enthusiast", "Coder", "Developer"],
+    //     loop: true,
+    //     typeSpeed: 65,
+    //     backSpeed: 65
+    //   });
+    // </script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
