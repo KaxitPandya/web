@@ -155,7 +155,7 @@
             classification to federated learning for water quality prediction. 
             <br>
             <br>
-            Professionally, I serve as an AI Engineer at Defai Digital, where I engineered a GraphRAG pipeline integrating Memgraph with Langchain to enable structured knowledge graph retrieval and contextual reasoning. I’ve also built LLM-powered chatbots, fine-tuned YOLO for document segmentation, and orchestrated complex workflows with multi-agent systems.
+            Professionally, I work as an AI Engineer at Defai Digital, where I engineered a GraphRAG pipeline integrating Memgraph with Langchain to enable structured knowledge graph retrieval and contextual reasoning. I’ve also built LLM-powered chatbots, fine-tuned YOLO for document segmentation, and orchestrated complex workflows with multi-agent systems.
             Previously, as an AI/ML Data Engineer at Genellipse Inc., I developed OCR pipelines using Google Cloud Vision API, applied BERT-based models to extract data from U.S. death certificates, and implemented LLMs for deriving actionable insights from complex data structures.
             <!-- <br> -->
             <!-- <br> -->
@@ -313,7 +313,7 @@
             <p style="font-size: medium; font-weight: 500; margin:10px;font-style:normal">
               Advancement in phishing attacks and Machine learning approaches 
               <a href="https://drive.google.com/file/d/1iSWPHYQW2JDehlRQLDzhOsqtwrYnIy2Z/view" target="_blank" 
-                 style="font-weight: bold; color: #00ffff; text-decoration: underline;">(Submitted)</a>
+                 style="font-weight: bold; text-decoration: underline;">(Submitted)</a>
             </p>
           </div>
 
@@ -627,7 +627,7 @@
               </h5>
               <ul style="text-align:left;color:#fff;">
                 <li>Create websites from scratch using several modern-day frameworks like node, express</li>
-                </li>Performing Create, Read, Update, Delete (CRUD) operations using MongoDB</li>
+                <li>Performing Create, Read, Update, Delete (CRUD) operations using MongoDB</li>
               </ul>
             </div>
           </a>
@@ -735,6 +735,23 @@
           </div></a>
         </div>
 
+        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
+          <a href="https://resume22-8ca971020619.herokuapp.com/" target="_blank">
+            <center>
+              <h4>AI-Powered Resume Analyzer</h4>
+            </center>
+            <div class="portfolio-wrap">
+              <img src="assets/img/project/ResumeAnalyzer.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <p>
+                  AI-powered Resume Analysis System
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
         <div class="col-lg-6 col-md-6 portfolio-item filter-app"><a href="https://instagram-caption-generator-smudvyyr8eprlaxctt6ulg.streamlit.app/" target="_blank">
           <center>
             <h4>AI-Powered Instagram Caption Generator</h4>
@@ -759,6 +776,23 @@
             </div>
           </div></a>
         </div>
+
+        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
+          <a href="#" target="_blank">
+            <center>
+              <h4>Fine-Tuning LLMs on Fleet Maintenance Data</h4>
+            </center>
+            <div class="portfolio-wrap">
+              <img src="assets/img/project/FleetLLM.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <p>
+                  Fine-tuned Large Language Models (LLMs) for predictive maintenance using <strong>PEFT techniques</strong> like <strong>LoRA</strong> to reduce computational overhead while maintaining high performance
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
         
         <div class="col-lg-6 col-md-6 portfolio-item filter-app"><a href="https://colab.research.google.com/drive/1b7_XIOTeE0nKHmZUySUozC5QYgaUIVfg#scrollTo=62c5f5d1=" target="_blank">
           <center>
@@ -785,6 +819,23 @@
             </div>
           </div></a>
         </div>
+
+        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
+          <a href="#" target="_blank">
+            <center>
+              <h4>Above Ground Biomass Prediction</h4>
+            </center>
+            <div class="portfolio-wrap">
+              <img src="assets/img/project/biomass_prediction.jpg" class="img-fluid" alt="Above Ground Biomass Prediction">
+              <div class="portfolio-info">
+                <p>
+                  Performed hyperparameter optimization on a sparse autoencoder, extracted latent-space embeddings, and used them as inputs to hyperparameter-tuned neural network and random forest models to improve prediction accuracy.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
         
         <div class="col-lg-6 col-md-6 portfolio-item filter-app"><a href="https://github.com/KaxitPandya/Data-Minining-Project-2022" target="_blank">
           <center>
